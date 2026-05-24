@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://d34j77mmgxsaj"]
+
+[ext_resource type="Texture2D" uid="uid://c2qjaegnw7723" path="res://assets/images/CafeScene/BasicCoffeeShop_ODDBLOT/BasicCoffeeShop_ODDBLOT/Basic_bar_1024.png" id="1_fiyp3"]
+[ext_resource type="Script" uid="uid://4mif5w8ii8gk" path="res://cafe.gd" id="1_wtkjf"]
+[ext_resource type="Texture2D" uid="uid://duva0sdc0vgnt" path="res://assets/images/backgrounds/wallpaper_cafe.jpg" id="2_0jp6t"]
+[ext_resource type="FontFile" uid="uid://c33elwcn5dca6" path="res://assets/fonts/jmh_typewriter/JMH Typewriter-Black.ttf" id="2_267oo"]
+[ext_resource type="Texture2D" uid="uid://bo3ubb1be28up" path="res://assets/images/CafeScene/BasicCoffeeShop_ODDBLOT/BasicCoffeeShop_ODDBLOT/Basic_light_512.png" id="3_ln8x3"]
+[ext_resource type="Texture2D" uid="uid://cdhog7ea2hqh" path="res://assets/images/CafeScene/BasicCoffeeShop_ODDBLOT/BasicCoffeeShop_ODDBLOT/Basic_window_512.png" id="4_p4dym"]
+[ext_resource type="Texture2D" uid="uid://6l60rncpjmfi" path="res://assets/images/CafeScene/BasicCoffeeShop_ODDBLOT/BasicCoffeeShop_ODDBLOT/Basic_tips_512.png" id="5_rk56j"]
+[ext_resource type="Texture2D" uid="uid://bjdp82lgherch" path="res://assets/images/CafeScene/BasicCoffeeShop_ODDBLOT/BasicCoffeeShop_ODDBLOT/Basic_shelf_512.png" id="6_wtkjf"]
+[ext_resource type="Texture2D" uid="uid://vcwm08mtq0yr" path="res://assets/animations/spritesheet_coffeemachine.png" id="8_6vcj2"]
+[ext_resource type="Texture2D" uid="uid://txyttqbig1xw" path="res://assets/images/CafeScene/order_items/Naj's Baked Good Assets/Naj's Baked Good Assets/Coffee To Go.png" id="9_fhm7l"]
+[ext_resource type="FontFile" uid="uid://bjgujej8dvyrv" path="res://assets/fonts/jmh_typewriter/JMH Typewriter.ttf" id="10_8y20h"]
+[ext_resource type="PackedScene" uid="uid://inwe0p7tqxr6" path="res://patience_bar.tscn" id="10_fhm7l"]
+[ext_resource type="Texture2D" uid="uid://bl7pm5ii61vka" path="res://assets/images/CafeScene/coin.png" id="12_8l67w"]
+[ext_resource type="AudioStream" uid="uid://unsmcstkt4r4" path="res://assets/audio/cafe_scene/background_music.mp3" id="13_e1iig"]
+[ext_resource type="AudioStream" uid="uid://os3paatpov2a" path="res://assets/audio/cafe_scene/kenney_ui-audio/Audio/click1.ogg" id="14_hl568"]
+[ext_resource type="AudioStream" uid="uid://dppwm6wdn05h7" path="res://assets/audio/cafe_scene/kenney_ui-audio/Audio/switch32.ogg" id="15_hl568"]
+[ext_resource type="FontFile" uid="uid://cvfxnr8f3y235" path="res://assets/fonts/jmh_typewriter/JMH Typewriter-Bold.ttf" id="16_s2o73"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_267oo"]
+bg_color = Color(0.1331245, 0.1450688, 0.0467918, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 1
+shadow_color = Color(0.09803922, 0.06666667, 0.011764706, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8y20h"]
+atlas = ExtResource("8_6vcj2")
+region = Rect2(0, 0, 257, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8l67w"]
+atlas = ExtResource("8_6vcj2")
+region = Rect2(257, 0, 257, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1iig"]
+atlas = ExtResource("8_6vcj2")
+region = Rect2(514, 0, 257, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elr04"]
+atlas = ExtResource("8_6vcj2")
+region = Rect2(771, 0, 257, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl568"]
+atlas = ExtResource("8_6vcj2")
+region = Rect2(1028, 0, 257, 258)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s2o73"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8y20h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8l67w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1iig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elr04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl568")
+}],
+"loop": false,
+"name": &"brewing",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=658458567]
+script = ExtResource("1_wtkjf")
+
+[node name="end_popup" type="Panel" parent="." unique_id=1988124001]
+visible = false
+z_index = 30
+offset_left = 360.0
+offset_top = 45.0
+offset_right = 945.0
+offset_bottom = 631.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_267oo")
+
+[node name="title_label" type="Label" parent="end_popup" unique_id=877872854]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 27.0
+offset_right = 538.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("2_267oo")
+theme_override_font_sizes/font_size = 30
+text = "Time Over!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="coins_label" type="Label" parent="end_popup" unique_id=1009662804]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 106.0
+offset_right = 553.0
+offset_bottom = 217.0
+theme_override_fonts/font = ExtResource("16_s2o73")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="served_label" type="Label" parent="end_popup" unique_id=215935179]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 200.0
+offset_right = 558.0
+offset_bottom = 300.0
+theme_override_fonts/font = ExtResource("16_s2o73")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="angry_label" type="Label" parent="end_popup" unique_id=1045125826]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 302.0
+offset_right = 556.0
+offset_bottom = 401.0
+theme_override_fonts/font = ExtResource("16_s2o73")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="retry_btn" type="Button" parent="end_popup" unique_id=643354371]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 481.0
+offset_right = 270.0
+offset_bottom = 561.0
+theme_override_fonts/font = ExtResource("16_s2o73")
+theme_override_font_sizes/font_size = 30
+text = "Try Again"
+
+[node name="menu_btn" type="Button" parent="end_popup" unique_id=441004285]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 487.0
+offset_right = 534.0
+offset_bottom = 567.0
+theme_override_fonts/font = ExtResource("16_s2o73")
+theme_override_font_sizes/font_size = 30
+text = "Main Menu"
+
+[node name="fade_rect" type="ColorRect" parent="." unique_id=1598065729]
+modulate = Color(1, 1, 1, 0)
+z_index = 20
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+
+[node name="Counter" type="Sprite2D" parent="." unique_id=290095087]
+z_index = 10
+position = Vector2(756.00006, 566)
+scale = Vector2(1.7636718, 1.4707034)
+texture = ExtResource("1_fiyp3")
+
+[node name="wallpaper" type="Sprite2D" parent="." unique_id=1414550410]
+show_behind_parent = true
+visibility_layer = 513
+position = Vector2(419, 126.999954)
+scale = Vector2(1.1535325, 0.782353)
+texture = ExtResource("2_0jp6t")
+
+[node name="wallpaper2" type="Sprite2D" parent="." unique_id=279704635]
+show_behind_parent = true
+visibility_layer = 513
+position = Vector2(1157, 243.99997)
+scale = Vector2(1.1535325, 0.782353)
+texture = ExtResource("2_0jp6t")
+
+[node name="light" type="Sprite2D" parent="." unique_id=1822784714]
+position = Vector2(650, 82)
+scale = Vector2(0.5859375, 0.58203125)
+texture = ExtResource("3_ln8x3")
+
+[node name="window" type="Sprite2D" parent="." unique_id=2067763178]
+z_as_relative = false
+position = Vector2(287, 226.00002)
+scale = Vector2(0.734375, 0.8261719)
+texture = ExtResource("4_p4dym")
+
+[node name="Shelf" type="Sprite2D" parent="." unique_id=38058160]
+position = Vector2(950, 216.00003)
+scale = Vector2(0.640625, 0.734375)
+texture = ExtResource("6_wtkjf")
+
+[node name="tip_jar" type="Sprite2D" parent="." unique_id=133010063]
+z_index = 20
+position = Vector2(1126.9999, 410.99994)
+scale = Vector2(0.3789062, 0.3798828)
+texture = ExtResource("5_rk56j")
+
+[node name="coffee_machine" type="AnimatedSprite2D" parent="." unique_id=492551256]
+z_index = 20
+position = Vector2(397, 391)
+scale = Vector2(0.6819065, 0.61240333)
+sprite_frames = SubResource("SpriteFrames_s2o73")
+animation = &"brewing"
+speed_scale = 0.5
+
+[node name="coin_label" type="Label" parent="." unique_id=112302182]
+offset_left = 1082.0
+offset_top = 6.0
+offset_right = 1272.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("10_8y20h")
+theme_override_font_sizes/font_size = 35
+
+[node name="patience_bar" parent="." unique_id=711570524 instance=ExtResource("10_fhm7l")]
+position = Vector2(660.52155, 266.16483)
+
+[node name="Coin" type="Sprite2D" parent="." unique_id=2059860692]
+position = Vector2(1037.3125, 27.562498)
+scale = Vector2(0.15675949, 0.14826767)
+texture = ExtResource("12_8l67w")
+
+[node name="background_music" type="AudioStreamPlayer2D" parent="." unique_id=949984500]
+stream = ExtResource("13_e1iig")
+autoplay = true
+parameters/looping = true
+
+[node name="machine_start_sound" type="AudioStreamPlayer2D" parent="." unique_id=1083793447]
+stream = ExtResource("14_hl568")
+
+[node name="machine_ready_sound" type="AudioStreamPlayer2D" parent="." unique_id=1899528660]
+stream = ExtResource("15_hl568")
+
+[node name="timer_label" type="Label" parent="." unique_id=1378117368]
+offset_left = 853.0
+offset_top = 3.0
+offset_right = 1055.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("16_s2o73")
+theme_override_font_sizes/font_size = 35
+
+[node name="coffee_cup" type="Sprite2D" parent="." unique_id=438722612]
+visible = false
+z_index = 100
+position = Vector2(607, 295.00003)
+scale = Vector2(0.13148153, 0.1212963)
+texture = ExtResource("9_fhm7l")

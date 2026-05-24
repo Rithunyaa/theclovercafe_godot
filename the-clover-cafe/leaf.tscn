@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://byhtdmxmwn5yc"]
+
+[ext_resource type="Texture2D" uid="uid://dk3iitk43m3rm" path="res://assets/animations/ELR-WindyLeafs/ELR-WindyLeafs/ELR_SpringlLeaf.png" id="1_p3lty"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wcxg"]
+atlas = ExtResource("1_p3lty")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvolp"]
+atlas = ExtResource("1_p3lty")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcdx0"]
+atlas = ExtResource("1_p3lty")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3bxt"]
+atlas = ExtResource("1_p3lty")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta5j2"]
+atlas = ExtResource("1_p3lty")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5irm4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wcxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvolp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcdx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3bxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta5j2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1563298935]
+sprite_frames = SubResource("SpriteFrames_5irm4")

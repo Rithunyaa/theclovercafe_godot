@@ -1,0 +1,36 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dcv2eb5tk5ifa"
+path="res://.godot/imported/JMH Typewriter-Black.otf-e014f22b5c52f2109eec8fb285724fbb.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/jmh_typewriter/JMH Typewriter-Black.otf"
+dest_files=["res://.godot/imported/JMH Typewriter-Black.otf-e014f22b5c52f2109eec8fb285724fbb.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

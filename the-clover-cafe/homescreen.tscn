@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://v06yg1t4hyuw"]
+
+[ext_resource type="Script" uid="uid://cu58d1svbtkt" path="res://homescreen.gd" id="1_a17e7"]
+[ext_resource type="Texture2D" uid="uid://dvfmvv8y8akpd" path="res://assets/images/backgrounds/forest_homescreen.png" id="1_tq0vd"]
+[ext_resource type="Texture2D" uid="uid://dnu2ooa67wv3u" path="res://assets/images/Homescreen/Screenshot 2026-05-15 184408-Picsart-BackgroundRemover.png" id="3_edeuv"]
+[ext_resource type="Texture2D" uid="uid://c8yppge7qv7yx" path="res://assets/images/Homescreen/blackboard_homescreen.png" id="4_edeuv"]
+[ext_resource type="FontFile" uid="uid://ccorse33e5ri3" path="res://assets/fonts/upheaval/upheavtt.ttf" id="5_c2ysq"]
+[ext_resource type="AudioStream" uid="uid://cnxwkhfuwuuew" path="res://assets/audio/home_screen/608392__kjartan_abel__april-showers-sweet-lo-fi-piano-vibes.wav" id="7_v0us7"]
+[ext_resource type="AudioStream" uid="uid://b11vsygvur7gp" path="res://assets/audio/home_screen/321083__benjaminnelan__wooden-click.wav" id="8_gboke"]
+[ext_resource type="Texture2D" uid="uid://ceawchn8b0mul" path="res://assets/images/Homescreen/background-removed-background-removed.png" id="11_rcdx0"]
+
+[node name="Node2D" type="Node2D" unique_id=1487221602]
+script = ExtResource("1_a17e7")
+
+[node name="Forest_Background" type="Sprite2D" parent="." unique_id=476825409]
+position = Vector2(631, 380)
+scale = Vector2(2.2082634, 1.2249191)
+texture = ExtResource("1_tq0vd")
+
+[node name="BlackboardHomescreen" type="Sprite2D" parent="." unique_id=1651918870]
+position = Vector2(627.5, 128.5625)
+scale = Vector2(1.2310606, 0.4138948)
+texture = ExtResource("4_edeuv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1244287518]
+offset_left = 239.0
+offset_top = 90.0
+offset_right = 1175.0
+offset_bottom = 202.0
+theme_override_colors/default_color = Color(0.9254902, 0.6901961, 0.45490196, 1)
+theme_override_fonts/normal_font = ExtResource("5_c2ysq")
+theme_override_font_sizes/normal_font_size = 90
+text = "The Clover Cafe"
+
+[node name="newgame_button" type="TextureButton" parent="." unique_id=2055033739]
+offset_left = 208.0
+offset_top = 238.0
+offset_right = 1039.0
+offset_bottom = 671.0
+texture_normal = ExtResource("3_edeuv")
+stretch_mode = 5
+
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="." unique_id=1930379711]
+stream = ExtResource("8_gboke")
+volume_db = 5.515
+
+[node name="Clover_Right" type="Sprite2D" parent="." unique_id=1226292754]
+position = Vector2(1058, 203)
+rotation = 0.20594884
+scale = Vector2(0.20674907, 0.17680183)
+texture = ExtResource("11_rcdx0")
+
+[node name="Clover_Left" type="Sprite2D" parent="." unique_id=1273662742]
+position = Vector2(173, 76.00001)
+rotation = -0.30892327
+scale = Vector2(0.20674907, 0.17680183)
+texture = ExtResource("11_rcdx0")
+
+[node name="fade_rect" type="ColorRect" parent="." unique_id=1006935372]
+modulate = Color(1, 1, 1, 0)
+offset_left = -11.0
+offset_right = 1300.0
+offset_bottom = 742.0
+mouse_filter = 2
+color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=303748864]
+position = Vector2(97, 690)
+stream = ExtResource("7_v0us7")
+autoplay = true

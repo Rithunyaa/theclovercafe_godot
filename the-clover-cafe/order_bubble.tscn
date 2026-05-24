@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d4bvv7vm2n51i"]
+
+[ext_resource type="Texture2D" uid="uid://cdeijgeql4jrk" path="res://assets/images/CafeScene/order_textbubble.png" id="1_ufule"]
+[ext_resource type="FontFile" uid="uid://cvfxnr8f3y235" path="res://assets/fonts/jmh_typewriter/JMH Typewriter-Bold.ttf" id="2_3q7ye"]
+
+[node name="order_bubble" type="Sprite2D" unique_id=1959725469]
+texture = ExtResource("1_ufule")
+
+[node name="quantity_label" type="Label" parent="." unique_id=1931470562]
+offset_left = -15.0
+offset_top = 80.0
+offset_right = 35.0
+offset_bottom = 110.0
+theme_override_colors/font_color = Color(0.15241438, 0.10057903, 0.070909046, 1)
+theme_override_fonts/font = ExtResource("2_3q7ye")
+theme_override_font_sizes/font_size = 30
+
+[node name="item_sprite" type="Sprite2D" parent="." unique_id=1311694473]

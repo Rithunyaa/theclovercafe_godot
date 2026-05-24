@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b6h0t3y4j1tjw"]
+
+[ext_resource type="FontFile" uid="uid://b6c5djud1fbwb" path="res://assets/fonts/jmh_typewriter/JMH Typewriter.otf" id="1_7ls63"]
+[ext_resource type="Script" uid="uid://cwjvnfhf7x1aq" path="res://instructions.gd" id="1_ne5nb"]
+[ext_resource type="FontFile" uid="uid://dcv2eb5tk5ifa" path="res://assets/fonts/jmh_typewriter/JMH Typewriter-Black.otf" id="3_jh4dl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ontcq"]
+bg_color = Color(0.49891412, 0.53182125, 0.18634453, 1)
+
+[node name="Control" type="Control" unique_id=1107424628]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ne5nb")
+
+[node name="Panel" type="Panel" parent="." unique_id=716713269]
+layout_mode = 0
+offset_right = 1283.0
+offset_bottom = 719.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ontcq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1531691202]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 58.0
+offset_right = 1219.0
+offset_bottom = 644.0
+theme_override_colors/default_color = Color(0.14406121, 0.07646317, 0.0068591675, 1)
+theme_override_fonts/normal_font = ExtResource("1_7ls63")
+theme_override_font_sizes/normal_font_size = 35
+text = "Welcome to The Clover Cafe! Every night, monsters of all shapes and sizes come to your cafe, desperate for their coffee fix. Your job is simple: keep them happy before they lose their patience and disappear back into the dark. Their patience bar is above their heads, and when it is empty they leave. Click the coffee machine to start brewing, then click again when it's ready to pick up your cup. Drag it to the right customer to serve them. You earn coins for every completed order: 10 for one cup, 30 for two. You have 3 minutes before the night is over. Serve as many as you can. Good luck... you'll need it."
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="Button" type="Button" parent="." unique_id=53537287]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 608.0
+offset_right = 1050.0
+offset_bottom = 692.0
+theme_override_fonts/font = ExtResource("3_jh4dl")
+theme_override_font_sizes/font_size = 60
+text = "Start"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
